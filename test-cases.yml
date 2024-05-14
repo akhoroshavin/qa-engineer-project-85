@@ -161,23 +161,44 @@
   prerequisites: |
     Пользователь авторизован
   test-data: |
-    код для решения: 
-    const _ = require("lodash");
-const R = require("rambda");
-const solution = (width, length) => {
-  return width * length;
-};
-module.exports = solution;
+    код для решения:
+    from typing import List, Dict
+    def solution(n: int) -> int:
+        x = divmod(n, 10);
+        return sum(x)
   steps:
     - Нажать кнопку Create a game
     - Нажать кнопку With a bot
-    - Выбрать тип задания rect area
+    - Выбрать тип задания add_two_numbers
     - Нажать Create a battle
-    - Выбрать язык `NodeJS`
+    - Выбрать язык `Python`
     - Ввести код
     - Нажать Run
   expected-result: |
      Появляется уведомление о победе "woohooo, you're champion"
+
+- summary: |
+    Проверка завершения игры
+  requirement: |
+    Игра должна завершаться
+  prerequisites: |
+    Пользователь авторизован
+  test-data: |
+    код для решения:
+    from typing import List, Dict
+    def solution(n: int) -> int:
+        x = divmod(n, 10);
+        return sum(x)
+  steps:
+    - Нажать кнопку Create a game
+    - Нажать кнопку With a bot
+    - Выбрать тип задания add_two_number
+    - Нажать Create a battle
+    - Выбрать язык `Python`
+    - Ввести код
+    - Нажать Run
+  expected-result: |
+     Игра завершена
 
 - summary: |
     Редирект в меню по кнопке back to home после победы игрока
@@ -301,29 +322,6 @@ module.exports = solution;
     - Ввести никнейм авторизованного пользователя в форму поиска
   expected-result: |
      Пользователь видит своего персонажа и информацию о его рейтинге
-
-- summary: |
-    Проверка завершения игры
-  requirement: |
-    Игра должна завершаться
-  prerequisites: |
-    Пользователь авторизован
-  test-data: |
-    код для решения:
-    from typing import List, Dict
-    def solution(n: int) -> int:
-        x = divmod(n, 10);
-        return sum(x)
-  steps:
-    - Нажать кнопку Create a game
-    - Нажать кнопку With a bot
-    - Выбрать тип задания add_two_number
-    - Нажать Create a battle
-    - Выбрать язык `Python`
-    - Ввести код
-    - Нажать Run
-  expected-result: |
-     Игра завершена
 
 - summary: |
     Проверка выбора языка программирования в режиме игры
