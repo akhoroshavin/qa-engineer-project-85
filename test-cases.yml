@@ -177,7 +177,7 @@ module.exports = solution;
     - Ввести код
     - Нажать Run
   expected-result: |
-     Появляется уведомление о победе
+     Появляется уведомление о победе "woohooo, you're champion"
 
 - summary: |
     Редирект в меню по кнопке back to home после победы игрока
