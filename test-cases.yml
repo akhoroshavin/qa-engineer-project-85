@@ -340,4 +340,3 @@ module.exports = solution;
     - Выбрать один из вариантов языка
   expected-result: |
      Язык программирования изменился  
-
